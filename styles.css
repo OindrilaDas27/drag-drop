@@ -33,16 +33,19 @@ body {
     height: 95%;
     margin: 0 2rem;
     background: wheat;
+    overflow: hidden;
 }
 
 .droppable, .draggable {
     text-align: center;
 }
 
-.draggable-items {
+.draggable-items, .drop-area {
+    height: 95%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fit, 11rem);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(2, 11rem);
     padding: 5%;
 }
 
@@ -53,4 +56,8 @@ body {
     background: aqua;
     text-align: center;
     cursor: move;
+}
+
+.dragging {
+    opacity: 0.5;
 }
