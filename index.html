@@ -10,13 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Deag and Drop</title>
 </head>
 <body>
     <h1 class="heading">Drag and Drop</h1>
+    <button id="resetBtn"  onclick="reset();">Reset</button>
     <div class="containers">
-        <div class="input-container"></div>
-        <div class="drop-container"></div>
+        <div class="container1">
+            <h2 class="droppable">Droppable Area</h2>
+            <div class="drop-area"></div>
+        </div>
+        <div class="container2">
+            <h2 class="draggable">Draggable Items</h2>
+            <div class="draggable-items">
+                <div class="item" draggable="true">Item 1</div>
+                <div class="item" draggable="true">Item 2</div>
+                <div class="item" draggable="true">Item 3</div>
+                <div class="item" draggable="true">Item 4</div>
+            </div>
+        </div>
+        <div class="success" id="successMessage"></div>
     </div>
 </body>
 </html>
