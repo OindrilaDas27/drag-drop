@@ -35,7 +35,7 @@ container.forEach(container => {
             
             if (drag !== droppedItemcount) {
                 // dropped = true;
-                showMessage('hi');
+                showMessage('Item dropped successfully!');
                 droppedItemcount = drag;
             }
     })
@@ -50,7 +50,7 @@ function showMessage(message) {
     // Remove the popup after a certain duration
     setTimeout(() => {
       popup.remove();
-    }, 800); // Adjust the duration as needed
+    }, 1000); // Adjust the duration as needed
   }
 
 
@@ -61,7 +61,6 @@ function reset() {
 
   // Reset the first container to its original state
   const draggableItems = document.querySelector('.draggable-items');
-  const originalItems = Array.from(draggableItems.children);
 
   // Reset the first container to its original state
   draggableItems.innerHTML = '';
