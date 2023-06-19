@@ -9,6 +9,7 @@ const draggableItems = document.querySelector('.draggable-items');
 const originalItems = Array.from(draggableItems.children);
 const snapshotItems = originalItems.map(item => item.cloneNode(true));
 
+let droppedItemcount = 0;
 
 //Add dragstart event listener to each draggable item
 draggable.forEach(draggable => {
@@ -28,12 +29,30 @@ container.forEach(container => {
     container.addEventListener('dragover', e => {
         //Prevent the default behavior of the browser
         e.preventDefault();
-        console.log('dragover');
 
             const drag = document.querySelector('.dragging');
             container.appendChild(drag);
+            
+            if (drag !== droppedItemcount) {
+                // dropped = true;
+                showMessage('Item dropped successfully!');
+                droppedItemcount = drag;
+            }
     })
 })
+
+function showMessage(message) {
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.textContent = message;
+    document.body.appendChild(popup);
+  
+    // Remove the popup after a certain duration
+    setTimeout(() => {
+      popup.remove();
+    }, 1000); // Adjust the duration as needed
+  }
+
 
 function reset() {
     /// Clear the second container
@@ -42,7 +61,6 @@ function reset() {
 
   // Reset the first container to its original state
   const draggableItems = document.querySelector('.draggable-items');
-  const originalItems = Array.from(draggableItems.children);
 
   // Reset the first container to its original state
   draggableItems.innerHTML = '';

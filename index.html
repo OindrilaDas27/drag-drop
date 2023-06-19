@@ -15,8 +15,10 @@
 </head>
 <body>
     <h1 class="heading">Drag and Drop</h1>
-    <button id="resetBtn"  onclick="reset();">Reset</button>
-    <div class="containers">
+    <div class="container">
+        <div class="success" id="successMessage"></div>
+        <button class="resetBtn"  onclick="reset();">Reset</button>
+        <div class="drag-drop">
         <div class="container1">
             <h2 class="droppable">Droppable Area</h2>
             <div class="drop-area"></div>
@@ -30,7 +32,7 @@
                 <div class="item" draggable="true">Item 4</div>
             </div>
         </div>
-        <div class="success" id="successMessage"></div>
+    </div>
     </div>
 </body>
 </html>

@@ -1,43 +1,54 @@
 body {
     height: 100%;
     width: 100%;
-    background: rgb(72, 55, 134);
+    background: #483786;
 }
 
 .heading {
     padding: 3rem 15rem 1rem 15rem;
     font-family: 'Playfair Display', serif;
     font-weight: 900;
-    color: rgb(193, 178, 245);
+    color: #dad0ff;
 }
 
-.containers {
+.container {
+    position: relative;
     width: 90%;
     height: 40rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 4%;
+    padding: 3rem 1rem;
+    border-radius: 1rem;
+    background: #ffffff36;
+    box-shadow: 0 4px 30px #0000001a;
+    backdrop-filter: blur(7.3px);
+    -webkit-backdrop-filter: blur(7.3px);
+    border: 1px solid #ffffff4f;
+}
+
+.drag-drop {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 0 4%;
-    padding: 3rem 1rem;
-    border-radius: 1rem;
-    background: rgba(255, 255, 255, 0.21);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.3px);
-    -webkit-backdrop-filter: blur(7.3px);
-    border: 1px solid rgba(255, 255, 255, 0.31);
+    padding: 4rem 0 0 0;
+    overflow: hidden;
 }
 
 .container1, .container2  {
     width: 50%;
-    height: 95%;
+    height: 100%;
     margin: 0 2rem;
-    background: wheat;
+    border-radius: 1rem;
+    background: #e8e1ffa2;
+    border: 2px solid #eeebfc;
     overflow: hidden;
 }
 
 .droppable, .draggable {
     text-align: center;
+    color: #37265e;
 }
 
 .draggable-items, .drop-area {
@@ -50,14 +61,41 @@ body {
 }
 
 .item {
-    height: 10rem;
     width: 10rem;
     margin: 0 1rem 1rem 0;
-    background: aqua;
+    padding: 35% 0;
+    background: #6456b6;
     text-align: center;
+    font-size: 2rem;
+    color: #dad0ff;
     cursor: move;
 }
 
 .dragging {
     opacity: 0.5;
+}
+
+.resetBtn {
+    width: 6rem;
+    height: 3rem;
+    margin: 0 2rem;
+    border-radius: 0.8rem;
+    border: 2px solid #37265e;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #37265e;
+}
+
+.popup {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    margin: -20% 0 0 45%;
+    padding: 3rem 2rem;
+    border-radius: 0.8rem;
+    z-index: 10;
+    background: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    color: #483786;
 }
